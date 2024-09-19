@@ -1,7 +1,7 @@
 # CLIFuzz
 This project can be used to learn how to develop a simple CLI tool and run it against both AFL and ubsan.
 
-![My Image](images/ShreyaaAFL.jpg)
+![My Image](images/ShreyaaAFL.png)
 ### AFL tool
 AFL tool set up in docker environment as AFL was initially cloned from: https://github.com/google/AFL
 ### AFL argument passing quirks
