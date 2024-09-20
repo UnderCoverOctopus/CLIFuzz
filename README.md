@@ -36,10 +36,12 @@ Vim editor can be used to add additional seed files. This should lokk like this:
 The docker file sets up initial environment for this project with all the features required for this project. <br>
 
 To build the file use:<br>
- **docker build -t target-image .**<br>
+ **docker build -t target_image .**<br>
 
 To run the file use: <br>
-**docker run -d -p 5000:5000 target-image**
+**docker run -d -p 5000:5000 target_image**<br>
+To run an existing image:<br>
+**docker run -it target_image**
 <br><br>
 ### Running fuzz / ubsan
 Inside docker environment use the following command to instrument for AFL,  use afl-fuzz: <br> **afl-gcc /CLIFuzz/target.c -fno-stack-protector -o target**<br>
@@ -52,6 +54,14 @@ Once compiled used following command to run AFL fuzzing or ubsan: **AFL_I_DONT
 Flags:
 - **-fno-stack-protector** disables stack protection and runtime protection allowing program to crash
 <br><br>
+### Crashes
+Navigate inside out/crashes directory. To look at crashes using:<br>
+**cat "id:u,sig:v,src:x,time:y,execs:z,op:havoc,rep:a"**<br>
+
+Example crashes:
+- adz��������������������1z���43F F242�
+- �[��d44�d4433.root@cfb251b35699
+
 ### Relavent Extensions in VSC
 - CodeSpace 
 - Copilot
